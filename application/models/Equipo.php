@@ -108,10 +108,12 @@ class Equipo extends CI_Model {
 			$update = array("estado" => "1");
 			$this->db->where("id", $id);
 			$this->db->update("equipo",$update);
+			return 1;
 		}else{
 			$update = array("estado" => "0");
 			$this->db->where("id", $id);
 			$this->db->update("equipo",$update);
+			return 1;
 		}
 
 		

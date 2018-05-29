@@ -109,4 +109,14 @@ class Equipos extends CI_Controller {
 
 	}
 
+	public function activar(){
+		$this->load->model('equipo');
+		if ($this->input->is_ajax_request()) {
+			
+			$this->equipo->activar($this->input->post('id'));
+			redirect("equipos");				
+			
+		}
+	}
+
 }

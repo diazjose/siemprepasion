@@ -46,11 +46,11 @@
                   <td class="text-center"><?= $equipo->categoria ?></td>
                   <td class="text-center">
                   <?php   if ($equipo->estado == 0) {?>
-                        <a href="<?= base_url() ?>equipos/activar/<?= $equipo->id ?>/0" class="btn btn-sm btn-danger"> Activar </a>
-                  <?php
+                        <strong><font color="red">DesHabilitado</font></strong> 
+                        <?php
                       }
                       else{?>
-                        <a href="<?= base_url() ?>equipos/activar/<?= $equipo->id ?>/0" class="btn btn-sm btn-primary">DesActivar</a>
+                        <strong><font color="blue">Habilitado</font></strong>
                       <?php
                         }  ?>
                   </td>
