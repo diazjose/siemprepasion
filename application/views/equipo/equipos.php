@@ -66,46 +66,14 @@
               <?php
                   $i++; 
                 }
-              }else{  
-
-                if ($equipo) {?>
-                  <tr> 
-
-                  <td class="text-center"><?php echo $equipo->nombre_equipo ?></td> 
-                  <?php
-                    $fecha = date("d-m-Y", strtotime($equipo->fecha_ingreso))
-                    
-                  ?>
-                  <td class="text-center"><?php echo $fecha ?></td>
-                  <td class="text-center"><?= $equipo->categoria ?></td>
-                  <td class="text-center">
-                  <?php   if ($equipo->estado == 0) {?>
-                        <a href="<?= base_url() ?>equipos/activar/<?= $equipo->id ?>/1" class="btn btn-sm btn-danger">Activar</a>
-                      <?php
-                      }
-                      else{?>
-                        <a href="<?= base_url() ?>equipos/activar/<?= $equipo->id ?>/1" class="btn btn-sm btn-primary">DesActivar</a>
-                        <?php
-                      }  ?>
-                  </td>
-                  <td class="text-center">
-                                      <a href="<?= base_url() ?>equipos/view_equipo/<?= $equipo->id ?>" class="btn btn-sm btn-info"><span class="oi oi-aperture"></span></a>
-                                      <a data-toggle="modal" data-target="#editar_equipo" onclick="selEquipo('<?= $equipo->id ?>', '<?= $equipo->nombre_equipo ?>', '<?= $equipo->fecha_ingreso ?>', '1')" class="btn btn-sm btn-primary"><span class="oi oi-pencil"></span></a>
-                                      <a href="#" id="delete" onclick="elimarSiNo()" class="btn btn-sm btn-danger btn-delete"><span class="oi oi-trash"></span></a>
-                              </td>
-            
-                  
-                </tr>
-                  
-
-                  
-              <?php     
-                }             
-              
-              } ?>
+              }?>
         
       </tbody>
     </table>
+    <div>
+       <img src="<?= base_url() ?>public/images/Futbol-torneo3" class="rounded" alt="Cinque Terre"> 
+    </div>
+
   </div>
 
   <div class="modal fade" id="equipoModal">

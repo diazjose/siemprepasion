@@ -37,26 +37,3 @@ function selEquipo(id, nombre, fecha, estado){
 	document.getElementById('Eestado').checked=estado; 
 			
 }
-
-function activar(id, viene){
-	var id = id;
-	var boton = viene;
-
-	$.ajax({
-		type: "POST",
-	            url: "equipos/activar",
-	            data: 'id='+id,
-	            
-	            success: function() {            
-	                		if (boton == 'off') {
-									$("#on").addClass("btn btn-primary");
-									$("#off").addClass("btn btn-light");
-							}else{
-								$("#off").addClass("btn btn-primary");
-								$("#on").addClass("btn btn-light");
-							};
-								
-	                	}	
-	});
-
-}
